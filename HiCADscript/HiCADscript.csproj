@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B10D904-BB3E-48A9-B307-E3D84D9F89CE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HiCADscript</RootNamespace>
+    <AssemblyName>HiCADscript</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ISD.BaseTypes">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.BaseTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.CAD.Base">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.CAD.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.CAD.Contexts">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.CAD.Contexts.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.CAD.Creators">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.CAD.Creators.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.CAD.Data">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.CAD.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.CAD.Dimensioning">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.CAD.Dimensioning.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.CAD.Interface">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.CAD.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.CAD.IO">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.CAD.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.CAD.PartSrv">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.CAD.PartSrv.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.CAD.PartSrvAccess">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.CAD.PartSrvAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.Core.API">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.Core.API.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.Math">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.Plugin">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.Scripting">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="ISD.Utilities">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateBox.cs" />
+    <Compile Include="EBPart.cs" />
+    <Compile Include="MyAttributesForNode.cs" />
+    <Compile Include="Script-Main.cs" />
+    <Compile Include="frmGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUI.Designer.cs">
+      <DependentUpon>frmGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmGUI.resx">
+      <DependentUpon>frmGUI.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

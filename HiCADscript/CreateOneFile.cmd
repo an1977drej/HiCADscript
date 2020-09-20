@@ -1,0 +1,1 @@
+for %a in (*.cs) do type %a >>all.cs
