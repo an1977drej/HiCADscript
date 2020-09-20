@@ -28,6 +28,7 @@ public class Script : ScriptBase
 
     public static void Main()
     {
+        //Hallo Script
         scriptGUI = new frmGUI();
         scriptGUI.Show();
         MyAttributesForNode.GetNodeMyAttributes();
