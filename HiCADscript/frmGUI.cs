@@ -57,18 +57,18 @@ public partial class frmGUI : Form
     private void InitializeListView()
     {
         EBPart part = new EBPart();
-        olvSongs.SetObjects(part.GetEBParts());
+        olvListViewEbParts.SetObjects(part.GetEBParts());
     }
 
     private void olvSongs_DoubleClick(object sender, EventArgs e)
     {
-        EBPart ebPart = (EBPart)olvSongs.SelectedObject;
+        EBPart ebPart = (EBPart)olvListViewEbParts.SelectedObject;
         CreateBox.PlaceBoxOnSelectedPoint(ebPart);
         ebPart.IsGezeichnet = "w";
         //MessageBox.Show(part.BMK);
         //MessageBox.Show(olvSongs.SelectedItem.Text);
-        olvSongs.RefreshObject(ebPart);
-        olvSongs.Update();
+        olvListViewEbParts.RefreshObject(ebPart);
+        olvListViewEbParts.Update();
     }
 
     private void button2_Click(object sender, EventArgs e)

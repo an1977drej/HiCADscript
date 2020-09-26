@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiCADscript", "HiCADscript\HiCADscript.csproj", "{3B10D904-BB3E-48A9-B307-E3D84D9F89CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Run", "Run\Run.csproj", "{1C360177-7D5F-4FB5-BC2E-A7D87EC4537F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateSingleFileScript", "CreateSingleScriptFile\CreateSingleFileScript.csproj", "{0E4E48FA-0299-41A2-A71E-794313A480A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{3B10D904-BB3E-48A9-B307-E3D84D9F89CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B10D904-BB3E-48A9-B307-E3D84D9F89CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B10D904-BB3E-48A9-B307-E3D84D9F89CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C360177-7D5F-4FB5-BC2E-A7D87EC4537F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C360177-7D5F-4FB5-BC2E-A7D87EC4537F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C360177-7D5F-4FB5-BC2E-A7D87EC4537F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C360177-7D5F-4FB5-BC2E-A7D87EC4537F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E4E48FA-0299-41A2-A71E-794313A480A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4E48FA-0299-41A2-A71E-794313A480A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4E48FA-0299-41A2-A71E-794313A480A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4E48FA-0299-41A2-A71E-794313A480A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

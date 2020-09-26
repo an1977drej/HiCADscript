@@ -29,7 +29,7 @@ partial class frmGUI
     {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.olvSongs = new BrightIdeasSoftware.ObjectListView();
+            this.olvListViewEbParts = new BrightIdeasSoftware.ObjectListView();
             this.titleColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.sizeColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.button3 = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@ partial class frmGUI
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnSetAttr = new System.Windows.Forms.Button();
             this.listViewProperties = new System.Windows.Forms.ListView();
-            ((System.ComponentModel.ISupportInitialize)(this.olvSongs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.olvListViewEbParts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -78,22 +78,22 @@ partial class frmGUI
             // 
             // olvSongs
             // 
-            this.olvSongs.AllColumns.Add(this.titleColumn);
-            this.olvSongs.AllColumns.Add(this.sizeColumn);
-            this.olvSongs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvListViewEbParts.AllColumns.Add(this.titleColumn);
+            this.olvListViewEbParts.AllColumns.Add(this.sizeColumn);
+            this.olvListViewEbParts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.titleColumn,
             this.sizeColumn});
-            this.olvSongs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.olvSongs.HideSelection = false;
-            this.olvSongs.Location = new System.Drawing.Point(0, 0);
-            this.olvSongs.Margin = new System.Windows.Forms.Padding(4);
-            this.olvSongs.Name = "olvSongs";
-            this.olvSongs.ShowGroups = false;
-            this.olvSongs.Size = new System.Drawing.Size(416, 244);
-            this.olvSongs.TabIndex = 3;
-            this.olvSongs.UseCompatibleStateImageBehavior = false;
-            this.olvSongs.View = System.Windows.Forms.View.Details;
-            this.olvSongs.DoubleClick += new System.EventHandler(this.olvSongs_DoubleClick);
+            this.olvListViewEbParts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.olvListViewEbParts.HideSelection = false;
+            this.olvListViewEbParts.Location = new System.Drawing.Point(0, 0);
+            this.olvListViewEbParts.Margin = new System.Windows.Forms.Padding(4);
+            this.olvListViewEbParts.Name = "olvSongs";
+            this.olvListViewEbParts.ShowGroups = false;
+            this.olvListViewEbParts.Size = new System.Drawing.Size(416, 244);
+            this.olvListViewEbParts.TabIndex = 3;
+            this.olvListViewEbParts.UseCompatibleStateImageBehavior = false;
+            this.olvListViewEbParts.View = System.Windows.Forms.View.Details;
+            this.olvListViewEbParts.DoubleClick += new System.EventHandler(this.olvSongs_DoubleClick);
             // 
             // titleColumn
             // 
@@ -170,7 +170,7 @@ partial class frmGUI
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.olvSongs);
+            this.splitContainer2.Panel1.Controls.Add(this.olvListViewEbParts);
             // 
             // splitContainer2.Panel2
             // 
@@ -241,7 +241,7 @@ partial class frmGUI
             this.Name = "frmGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.olvSongs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.olvListViewEbParts)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -262,7 +262,7 @@ partial class frmGUI
 
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.Button button2;
-    private BrightIdeasSoftware.ObjectListView olvSongs;
+    private BrightIdeasSoftware.ObjectListView olvListViewEbParts;
     private BrightIdeasSoftware.OLVColumn titleColumn;
     private BrightIdeasSoftware.OLVColumn sizeColumn;
     private System.Windows.Forms.Button button3;

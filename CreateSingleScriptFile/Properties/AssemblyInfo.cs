@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Run")]
+[assembly: AssemblyTitle("CreateSingleScriptFile")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Run")]
+[assembly: AssemblyProduct("CreateSingleScriptFile")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1c360177-7d5f-4fb5-bc2e-a7d87ec4537f")]
+[assembly: Guid("0e4e48fa-0299-41a2-a71e-794313a480a8")]
 
 // Version information for an assembly consists of the following four values:
 //

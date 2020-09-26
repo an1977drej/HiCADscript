@@ -44,6 +44,7 @@ class CreateBox
 
         //2D text
         //FigureTextCreator.Create("ggg", activeScene.ActiveFigure, new Point2D(0, 0), new Angle(90));
+        parent.Activate();
         Context.EnforceBrowserUpdate();
         Context.EnforceRedraw();
         return Box;
@@ -53,7 +54,6 @@ class CreateBox
     {
         ebPart = EbP;
         Selection.SelectionEvent += OnPointSelected;
-        //Selection.SelectionEvent += delegate (object sender, SelectionEventArgs args) { OnPointSelected(sender, args, box); };
         Selection.StartSelection(SelectionType.Point, "Select a point");
     }
 
@@ -71,6 +71,5 @@ class CreateBox
             box.Move(blockTransformation);
         }
         Selection.SelectionEvent -= OnPointSelected;
-        //Selection.SelectionEvent -= delegate (object s, SelectionEventArgs a) { OnPointSelected(sender, args, part); };
     }
 }
