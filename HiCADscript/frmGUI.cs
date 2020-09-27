@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HiCADscript;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,7 +64,15 @@ public partial class frmGUI : Form
     private void olvSongs_DoubleClick(object sender, EventArgs e)
     {
         EBPart ebPart = (EBPart)olvListViewEbParts.SelectedObject;
-        CreateBox.PlaceBoxOnSelectedPoint(ebPart);
+        if (ebPart.StepPath == null)
+        {
+            CreateShapeFromBox.PlaceShapeOnSelectedPoint(ebPart);
+        }
+        else
+        {
+            CreateShapeFromStep.PlaceShapeOnSelectedPoint(ebPart);
+        }
+        
         ebPart.IsGezeichnet = "w";
         //MessageBox.Show(part.BMK);
         //MessageBox.Show(olvSongs.SelectedItem.Text);
@@ -84,6 +93,7 @@ public partial class frmGUI : Form
 
     private void button4_Click(object sender, EventArgs e)
     {
+        
 
     }
 

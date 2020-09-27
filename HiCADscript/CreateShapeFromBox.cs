@@ -13,19 +13,19 @@ using System.Collections.Generic;
 using ISD.CAD.Interface;
 
 
-class CreateBox
+static class CreateShapeFromBox
 {
     static UnconstrainedContext Context;
     static EBPart ebPart;
     static frmGUI scriptGUI;
 
-    static CreateBox()
+    static CreateShapeFromBox()
     {
         Context = Script.Context;
         scriptGUI = Script.scriptGUI;
     }
 
-    public static Part PlaceBoxInCurrentNode(EBPart ebPart)
+    public static Part PlaceShapeInCurrentNode(EBPart ebPart)
     {
         AssemblyNode parent = (AssemblyNode)Context.ActiveNode;
         BlockCreator blockCreator = new BlockCreator(ebPart.Length, ebPart.Width, ebPart.Height);
@@ -50,14 +50,14 @@ class CreateBox
         return Box;
     }
 
-    public static void PlaceBoxOnSelectedPoint(EBPart EbP)
+    public static void PlaceShapeOnSelectedPoint(EBPart EbP)
     {
         ebPart = EbP;
         Selection.SelectionEvent += OnPointSelected;
         Selection.StartSelection(SelectionType.Point, "Select a point");
     }
 
-    public static void OnPointSelected(object sender, SelectionEventArgs args)
+    private static void OnPointSelected(object sender, SelectionEventArgs args)
     {
         Transformation blockTransformation = new Transformation();
 
@@ -67,7 +67,7 @@ class CreateBox
         {
             scriptGUI.Say(lastPoint.Point.ToString());
             blockTransformation.SetTranslation(new Vector3D(lastPoint.Point));
-            Part box = PlaceBoxInCurrentNode(ebPart);
+            Part box = PlaceShapeInCurrentNode(ebPart);
             box.Move(blockTransformation);
         }
         Selection.SelectionEvent -= OnPointSelected;

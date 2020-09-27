@@ -34,6 +34,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HiCAD.Data">
+      <HintPath>..\..\..\..\..\..\HiCAD\exe\API\HiCAD.Data.dll</HintPath>
+    </Reference>
     <Reference Include="ISD.BaseTypes">
       <HintPath>..\..\..\..\..\..\HiCAD\exe\API\ISD.BaseTypes.dll</HintPath>
     </Reference>
@@ -94,7 +97,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateBox.cs" />
+    <Compile Include="CreateShapeFromBox.cs" />
+    <Compile Include="CreateShapeFromStep.cs" />
     <Compile Include="EBPart.cs" />
     <Compile Include="MyAttributesForNode.cs" />
     <Compile Include="Script-Main.cs" />

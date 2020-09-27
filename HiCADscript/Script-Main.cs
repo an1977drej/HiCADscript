@@ -3,6 +3,7 @@
 // <assembly>API/ISD.CAD.Dimensioning.dll</assembly>
 // <assembly>API/ISD.CAD.IO.dll</assembly>
 // <assembly>API/ObjectListView.dll</assembly>
+// <assembly>API/HiCAD.Data.dll</assembly>
 
 
 using System;
@@ -165,13 +166,7 @@ public class Script : ScriptBase
     }
 
 
-    public static void SetAtr()
-    {
-        Node parent = (AssemblyNode)Context.ActiveNode;
-        parent.AttributeSet.Add(new Attrib("MyString", "fgfgfg"));
-        AttributeSet attributes = parent.AttributeSet.CreateSubSet("ProjectAttributes").Value as AttributeSet;
-        attributes.Add(new Attrib("MyStringAttribute", "abc"));
-    }
+    
 
 }
 
